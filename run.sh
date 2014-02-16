@@ -14,7 +14,7 @@ fi
 
 if [ ! -n "$WERCKER_IRON_WORKER_ARGS"  ]
 then
-    fail "Missing or empty option IRON_WORKER_ARGS. $error_suffix"
+    WERCKER_IRON_WORKER_ARGS=""
 fi
 
 # Install iron worker cli if needed
