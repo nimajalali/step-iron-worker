@@ -26,25 +26,14 @@ then
 
     sudo apt-get update
     sudo apt-get install -y ruby1.9.1
-    result=$(sudo gem install iron_worker_ng)
+    sudo gem install iron_worker_ng
 
-    if [[ $? -ne 0 ]];then
-        warn $result
-        fail 'iron worker cli installation failed';
-    else
-        info 'finished iron worker cli installation';
-    fi
+    info 'finished iron worker cli installation';
 else
     info 'iron worker cli is available, and will not be installed by this step'
-    debug "type iron_worker: $(type iron_worker)"
-    debug "iron worker version: $(iron_worker --version)"
 fi
 
-result=$(iron_worker $WERCKER_IRON_WORKER_CMD $WERCKER_IRON_WORKER $WERCKER_IRON_WORKER_ARGS)
-if [[ $? -ne 0 ]];then
-    warn $result
-    fail 'iron_worker $WERCKER_IRON_WORKER_CMD failed';
-else
-    success 'iron_worker $WERCKER_IRON_WORKER_CMD finished';
-fi
+debug "type iron_worker: $(type iron_worker)"
+debug "iron worker version: $(iron_worker --version)"
 
+iron_worker $WERCKER_IRON_WORKER_CMD $WERCKER_IRON_WORKER $WERCKER_IRON_WORKER_ARGS
