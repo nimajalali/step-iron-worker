@@ -5,7 +5,7 @@ step-iron-worker
 
 # Iron Worker Step
 
-Use the Iron Worker CLI to run, upload, queue and schedule workers in Iron.io. More info [here](http://dev.iron.io/worker/reference/cli/). This step assumes the iron.json and my_worker.worker files exist in your root source directory.
+Use the Iron Worker CLI to run, upload, queue and schedule workers in Iron.io. More info [here](http://dev.iron.io/worker/reference/cli/). This step assumes the iron.json and my_worker.worker files exist in the current executing direcotry.
 
 # Options
 
