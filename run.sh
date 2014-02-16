@@ -2,9 +2,9 @@
 error_suffix='Please add this option to the wercker.yml'
 
 
-if [ ! -n "$WERCKER_IRON_WORKER_NAME"  ]
+if [ ! -n "$WERCKER_IRON_WORKER_WORKER_NAME"  ]
 then
-    fail "Missing or empty option IRON_WORKER_NAME. $error_suffix"
+    fail "Missing or empty option IRON_WORKER_WORKER_NAME. $error_suffix"
 fi
 
 if [ ! -n "$WERCKER_IRON_WORKER_CMD"  ]
