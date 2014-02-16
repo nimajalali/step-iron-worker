@@ -26,6 +26,7 @@ then
 
     sudo apt-get update
     sudo apt-get install -y ruby1.9.1
+    sudo gem install typhoeus
     sudo gem install iron_worker_ng
 
     info 'finished iron worker cli installation';
@@ -35,7 +36,5 @@ fi
 
 debug "type iron_worker: $(type iron_worker)"
 debug "iron worker version: $(iron_worker --version)"
-
-info 'running iron_worker $WERCKER_IRON_WORKER_CMD $WERCKER_IRON_WORKER_WORKER_NAME $WERCKER_IRON_WORKER_ARGS'
 
 iron_worker $WERCKER_IRON_WORKER_CMD $WERCKER_IRON_WORKER_WORKER_NAME $WERCKER_IRON_WORKER_ARGS
