@@ -36,4 +36,6 @@ fi
 debug "type iron_worker: $(type iron_worker)"
 debug "iron worker version: $(iron_worker --version)"
 
-iron_worker $WERCKER_IRON_WORKER_CMD $WERCKER_IRON_WORKER $WERCKER_IRON_WORKER_ARGS
+info 'running iron_worker $WERCKER_IRON_WORKER_CMD $WERCKER_IRON_WORKER_WORKER_NAME $WERCKER_IRON_WORKER_ARGS'
+
+iron_worker $WERCKER_IRON_WORKER_CMD $WERCKER_IRON_WORKER_WORKER_NAME $WERCKER_IRON_WORKER_ARGS
